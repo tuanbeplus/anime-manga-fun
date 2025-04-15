@@ -26,7 +26,7 @@ const WishlistPage: React.FC = () => {
           </button>
           <Link
             to="/"
-            className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded transition-colors duration-300"
+            className="btn-browse-more px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded transition-colors duration-300"
           >
             Browse More
           </Link>

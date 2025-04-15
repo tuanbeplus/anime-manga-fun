@@ -23,7 +23,7 @@ const MediaCard: React.FC<MediaCardProps> = ({ item, type }) => {
 
   return (
     <Link to={`/${type}/${item.mal_id}`} className="block h-full">
-      <div className="bg-gray-700 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-[1.05] h-full flex flex-col">
+      <div className="bg-gray-700 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-[1.04] h-full flex flex-col">
         <div className="relative flex-shrink-0">
           <img
             src={item.images.jpg.large_image_url}

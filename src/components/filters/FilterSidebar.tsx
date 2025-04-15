@@ -87,7 +87,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ type, filters, onFilterCh
       
       <div className="space-y-8">
         <div>
-          <h3 className="text-lg font-medium mb-4 text-gray-300">Type</h3>
+          <h3 className="text-m font-bold mb-4 text-gray-300">Type</h3>
           <div className="space-y-2">
             {(type === 'anime' ? animeTypes : mangaTypes).map((itemType) => (
               <label key={itemType} className="flex items-center cursor-pointer group">
@@ -100,15 +100,15 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ type, filters, onFilterCh
                     onChange={(e) => onFilterChange('type', e.target.value)}
                     className="sr-only"
                   />
-                  <div className={`w-5 h-5 border-2 rounded-full transition-colors ${filters.type === itemType ? 'border-blue-500 bg-blue-500' : 'border-gray-500 group-hover:border-gray-400'}`}>
+                  <div className={`w-4 h-4 border-2 rounded-full transition-colors ${filters.type === itemType ? 'border-blue-500 bg-blue-500' : 'border-gray-500 group-hover:border-gray-400'}`}>
                     {filters.type === itemType && (
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-2 h-2 bg-white rounded-full"></div>
+                        <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
                       </div>
                     )}
                   </div>
                 </div>
-                <span className={`ml-3 ${filters.type === itemType ? 'text-blue-400' : 'text-gray-300 group-hover:text-gray-200'}`}>
+                <span className={`ml-3 text-sm ${filters.type === itemType ? 'text-blue-400' : 'text-gray-300 group-hover:text-gray-200'}`}>
                   {itemType}
                 </span>
               </label>
@@ -117,7 +117,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ type, filters, onFilterCh
         </div>
 
         <div>
-          <h3 className="text-lg font-medium mb-4 text-gray-300">Status</h3>
+          <h3 className="text-m font-bold mb-4 text-gray-300">Status</h3>
           <div className="space-y-2">
             {statuses.map((status) => (
               <label key={status} className="flex items-center cursor-pointer group">
@@ -130,15 +130,15 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ type, filters, onFilterCh
                     onChange={(e) => onFilterChange('status', e.target.value)}
                     className="sr-only"
                   />
-                  <div className={`w-5 h-5 border-2 rounded-full transition-colors ${filters.status === status ? 'border-blue-500 bg-blue-500' : 'border-gray-500 group-hover:border-gray-400'}`}>
+                  <div className={`w-4 h-4 border-2 rounded-full transition-colors ${filters.status === status ? 'border-blue-500 bg-blue-500' : 'border-gray-500 group-hover:border-gray-400'}`}>
                     {filters.status === status && (
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-2 h-2 bg-white rounded-full"></div>
+                        <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
                       </div>
                     )}
                   </div>
                 </div>
-                <span className={`ml-3 ${filters.status === status ? 'text-blue-400' : 'text-gray-300 group-hover:text-gray-200'}`}>
+                <span className={`ml-3 text-sm ${filters.status === status ? 'text-blue-400' : 'text-gray-300 group-hover:text-gray-200'}`}>
                   {status}
                 </span>
               </label>
@@ -147,7 +147,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ type, filters, onFilterCh
         </div>
 
         <div>
-          <h3 className="text-lg font-medium mb-4 text-gray-300">Genres</h3>
+          <h3 className="text-m font-bold mb-4 text-gray-300">Genres</h3>
           <div className="space-y-2">
             {genres.map((genre) => (
               <label key={genre} className="flex items-center cursor-pointer group">
@@ -160,15 +160,15 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ type, filters, onFilterCh
                     onChange={(e) => onFilterChange('genres', e.target.value)}
                     className="sr-only"
                   />
-                  <div className={`w-5 h-5 border-2 rounded-full transition-colors ${filters.genres === genre ? 'border-blue-500 bg-blue-500' : 'border-gray-500 group-hover:border-gray-400'}`}>
+                  <div className={`w-4 h-4 border-2 rounded-full transition-colors ${filters.genres === genre ? 'border-blue-500 bg-blue-500' : 'border-gray-500 group-hover:border-gray-400'}`}>
                     {filters.genres === genre && (
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-2 h-2 bg-white rounded-full"></div>
+                        <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
                       </div>
                     )}
                   </div>
                 </div>
-                <span className={`ml-3 ${filters.genres === genre ? 'text-blue-400' : 'text-gray-300 group-hover:text-gray-200'}`}>
+                <span className={`ml-3 text-sm ${filters.genres === genre ? 'text-blue-400' : 'text-gray-300 group-hover:text-gray-200'}`}>
                   {genre}
                 </span>
               </label>
@@ -178,7 +178,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ type, filters, onFilterCh
 
         {(type === 'anime' || type === 'manga') && (
           <div>
-            <h3 className="text-lg font-medium mb-4 text-gray-300">Rating</h3>
+            <h3 className="text-m font-bold mb-4 text-gray-300">Rating</h3>
             <div className="space-y-2">
               {ratings.map((rating) => (
                 <label key={rating} className="flex items-center cursor-pointer group">
@@ -191,15 +191,15 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ type, filters, onFilterCh
                       onChange={(e) => onFilterChange('rating', e.target.value)}
                       className="sr-only"
                     />
-                    <div className={`w-5 h-5 border-2 rounded-full transition-colors ${filters.rating === rating ? 'border-blue-500 bg-blue-500' : 'border-gray-500 group-hover:border-gray-400'}`}>
+                    <div className={`w-4 h-4 border-2 rounded-full transition-colors ${filters.rating === rating ? 'border-blue-500 bg-blue-500' : 'border-gray-500 group-hover:border-gray-400'}`}>
                       {filters.rating === rating && (
                         <div className="absolute inset-0 flex items-center justify-center">
-                          <div className="w-2 h-2 bg-white rounded-full"></div>
+                          <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
                         </div>
                       )}
                     </div>
                   </div>
-                  <span className={`ml-3 ${filters.rating === rating ? 'text-blue-400' : 'text-gray-300 group-hover:text-gray-200'}`}>
+                  <span className={`ml-3 text-sm ${filters.rating === rating ? 'text-blue-400' : 'text-gray-300 group-hover:text-gray-200'}`}>
                     {rating}
                   </span>
                 </label>
@@ -215,7 +215,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ type, filters, onFilterCh
             onFilterChange('rating', '');
             onFilterChange('genres', '');
           }}
-          className="w-full py-3 mt-4 bg-gray-700 hover:bg-gray-600 rounded-lg transition-colors duration-300 text-gray-300 hover:text-white font-medium"
+          className="w-full py-3 mt-4 bg-gray-700 hover:bg-gray-600 rounded-lg transition-colors duration-300 text-gray-300 hover:text-white font-bold"
         >
           Clear Filters
         </button>

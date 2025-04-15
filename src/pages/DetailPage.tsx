@@ -62,7 +62,7 @@ const DetailPage: React.FC = () => {
   }
 
   return (
-    <div className="max-w-6xl mx-auto relative">
+    <div className="mx-auto relative">
       <button
         onClick={() => navigate(`/${type}`)} 
         className="absolute top-0 right-0 px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded transition-colors duration-300"
