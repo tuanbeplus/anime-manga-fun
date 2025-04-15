@@ -62,7 +62,13 @@ const DetailPage: React.FC = () => {
   }
 
   return (
-    <div className="max-w-6xl mx-auto">
+    <div className="max-w-6xl mx-auto relative">
+      <button
+        onClick={() => navigate(`/${type}`)} 
+        className="absolute top-0 right-0 px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded transition-colors duration-300"
+      >
+        Back to {type === 'anime' ? 'Anime' : 'Manga'}
+      </button>
       <div className="flex flex-col md:flex-row gap-8">
         <div className="md:w-1/3">
           <img
@@ -70,16 +76,28 @@ const DetailPage: React.FC = () => {
             alt={item.title}
             className="w-full rounded-lg shadow-lg"
           />
-          <button
-            onClick={handleWishlistToggle}
-            className={`w-full mt-4 py-2 rounded transition-colors duration-300 ${
-              isInWishlist(item.mal_id)
-                ? 'bg-red-600 hover:bg-red-700'
-                : 'bg-blue-600 hover:bg-blue-700'
-            }`}
-          >
-            {isInWishlist(item.mal_id) ? 'Remove from Wishlist' : 'Add to Wishlist'}
-          </button>
+          <div className="flex gap-2 mt-4">
+            {type === 'anime' && item.trailer?.url && (
+              <a
+                href={item.trailer.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 py-2 bg-purple-600 hover:bg-purple-700 rounded text-center transition-colors duration-300"
+              >
+                Watch Trailer
+              </a>
+            )}
+            <button
+              onClick={handleWishlistToggle}
+              className={`flex-1 py-2 rounded transition-colors duration-300 ${
+                isInWishlist(item.mal_id)
+                  ? 'bg-red-600 hover:bg-red-700'
+                  : 'bg-blue-600 hover:bg-blue-700'
+              }`}
+            >
+              {isInWishlist(item.mal_id) ? 'Remove from Wishlist' : 'Add to Wishlist'}
+            </button>
+          </div>
         </div>
 
         <div className="md:w-2/3">

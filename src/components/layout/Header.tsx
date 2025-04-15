@@ -6,33 +6,34 @@ const Header: React.FC = () => {
 
   return (
     <header className="bg-gray-900 text-white p-4">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-4">
+      <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between px-4 gap-4">
         <div className="flex items-center gap-12">
           <Link to="/" className="text-2xl font-bold">
             Anime/Manga Fun
           </Link>
-          
-          <nav className="flex items-center space-x-8">
-            <Link 
-              to="/" 
-              className={`hover:text-gray-300 transition-colors py-2 ${location.pathname === '/anime' || location.pathname === '/' ? 'text-blue-400 font-semibold border-b-2 border-blue-400' : ''}`}
-            >
-              Anime
-            </Link>
-            <Link 
-              to="/manga" 
-              className={`hover:text-gray-300 transition-colors py-2 ${location.pathname === '/manga' ? 'text-blue-400 font-semibold border-b-2 border-blue-400' : ''}`}
-            >
-              Manga
-            </Link>
-            <Link 
-              to="/wishlist" 
-              className={`hover:text-gray-300 transition-colors py-2 ${location.pathname === '/wishlist' ? 'text-blue-400 font-semibold border-b-2 border-blue-400' : ''}`}
-            >
-              Wishlist
-            </Link>
-          </nav>
         </div>
+          
+        <nav className="flex items-center space-x-8">
+          <Link 
+            to="/" 
+            className={`hover:text-gray-300 transition-colors py-2 ${location.pathname === '/anime' || location.pathname === '/' ? 'text-blue-400 font-semibold border-b-2 border-blue-400' : ''}`}
+          >
+            Anime
+          </Link>
+          <Link 
+            to="/manga" 
+            className={`hover:text-gray-300 transition-colors py-2 ${location.pathname === '/manga' ? 'text-blue-400 font-semibold border-b-2 border-blue-400' : ''}`}
+          >
+            Manga
+          </Link>
+          <Link 
+            to="/wishlist" 
+            className={`hover:text-gray-300 transition-colors py-2 ${location.pathname === '/wishlist' ? 'text-blue-400 font-semibold border-b-2 border-blue-400' : ''}`}
+          >
+            Wishlist
+          </Link>
+        </nav>
+        
         <div className="flex items-center">
           <img
             src="/avatar.jpeg"

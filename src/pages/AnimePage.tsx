@@ -66,10 +66,10 @@ const AnimePage: React.FC = () => {
         />
       </div>
 
-      <div className="flex-1">
+      <div className="flex-1 w-full">
         {loading ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {[...Array(12)].map((_, index) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full">
+            {[...Array(24)].map((_, index) => (
               <MediaCardSkeleton key={index} />
             ))}
           </div>

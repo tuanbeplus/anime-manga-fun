@@ -15,7 +15,7 @@ const Skeleton: React.FC<SkeletonProps> = ({ className = '' }) => {
 
 export const MediaCardSkeleton: React.FC = () => {
   return (
-    <div className="bg-gray-700 rounded-lg overflow-hidden shadow-lg h-full flex flex-col">
+    <div className="bg-gray-700 rounded-lg overflow-hidden shadow-lg h-full flex flex-col w-full">
       <div className="relative flex-shrink-0">
         <Skeleton className="w-full h-64" />
       </div>
